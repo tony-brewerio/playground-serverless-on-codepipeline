@@ -8,4 +8,4 @@ phases:
   build:
     commands:
       - cp -r ${CODEBUILD_SRC_DIR_BuildArtifact}/.serverless ./
-      - ./node_modules/.bin/sls deploy -v -p
+      - ./node_modules/.bin/sls deploy -v -p .serverless
