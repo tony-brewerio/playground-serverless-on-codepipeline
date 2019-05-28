@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install serverless
+  build:
+    commands:
+      - ./node_modules/.bin/sls package
+artifacts:
+  files:
+    - .serverless/le-service.zip
