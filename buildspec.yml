@@ -9,7 +9,5 @@ phases:
     commands:
       - ./node_modules/.bin/sls package
 artifacts:
-  name: $(CODEBUILD_SOURCE_VERSION)
-  discard-paths: yes
   files:
-    - .serverless/le-service.zip
+    - .serverless
