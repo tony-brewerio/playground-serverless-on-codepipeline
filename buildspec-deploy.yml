@@ -4,9 +4,7 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-      - echo 1
+      - npm ci
   build:
     commands:
-      - find .
-      - find / -name '*.zip'
-      - printenv
+      - ./node_modules/.bin/sls deploy -v -p ${CODEBUILD_SRC_DIR_BuildArtifact}/le-service.zip
