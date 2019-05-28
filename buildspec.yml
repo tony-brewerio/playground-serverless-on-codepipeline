@@ -10,4 +10,4 @@ phases:
       - ./node_modules/.bin/sls package
 artifacts:
   files:
-    - .serverless
+    - '.serverless/**/*'
