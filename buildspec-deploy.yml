@@ -7,5 +7,5 @@ phases:
       - npm ci
   build:
     commands:
-      - find ${CODEBUILD_SRC_DIR_BuildArtifact}
-      - ./node_modules/.bin/sls deploy -v -p ${CODEBUILD_SRC_DIR_BuildArtifact}/.serverless
+      - cp -r ${CODEBUILD_SRC_DIR_BuildArtifact}/.serverless ./
+      - ./node_modules/.bin/sls deploy -v -p

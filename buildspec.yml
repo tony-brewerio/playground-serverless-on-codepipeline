@@ -8,6 +8,7 @@ phases:
   build:
     commands:
       - ./node_modules/.bin/sls package
+      - sed -i .serverless/serverless-state.json 's/"artifact": "[^"]*.serverless/"artifact": ".serverless/'
 artifacts:
   files:
     - '.serverless/**/*'
